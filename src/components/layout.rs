@@ -10,7 +10,7 @@ pub fn Layout() -> impl IntoView {
                         "Hi there, 👋"
                     </h1>
                     <p class="mt-6 text-lg leading-8 text-gray-600">
-                        "Welcome to my website!"
+                        "Welcome to sierra!"
                     </p>
                 </div>
             </div>
