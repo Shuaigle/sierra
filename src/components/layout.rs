@@ -1,7 +1,7 @@
 use leptos::*;
 
 #[component]
-pub fn Layout() -> impl IntoView {
+pub fn Hello() -> impl IntoView {
     view! {
         <div class="relative isolate px-6 pt-14 lg:px-8">
             <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:py-28">
@@ -20,10 +20,10 @@ pub fn Layout() -> impl IntoView {
 
 #[component]
 pub fn Header() -> impl IntoView {
-    let nav_items = [("About", "/about"), ("Posts", "/posts"), ("Tags", "/tags")];
+    let nav_items = [("Play", "/play")];
 
     view! {
-        <header class="relative z-50">
+        <header class="relative z-50 bg-slate-600">
             <nav
                 class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
                 aria-label="Global"
@@ -37,7 +37,7 @@ pub fn Header() -> impl IntoView {
                         .map(|(name, href)| {
                             view! {
                                 <a
-                                    class="text-sm font-semibold leading-6 text-gray-900"
+                                    class="text-xl font-semibold leading-6 text-gray-300"
                                     href=href.to_string()
                                 >
                                     {name.to_string()}

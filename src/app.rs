@@ -3,6 +3,7 @@ use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
 use crate::pages::home::*;
+use crate::pages::play::*;
 use crate::components::layout::*;
 
 #[component]
@@ -15,10 +16,8 @@ pub fn App() -> impl IntoView {
         // id=leptos means cargo-leptos will hot-reload this stylesheet
         <Stylesheet id="leptos" href="/pkg/sierra.css"/>
 
-        // sets the document title
         <Title text="Sierra"/>
 
-        // content for this welcome page
         <Router fallback=|| {
             let mut outside_errors = Errors::default();
             outside_errors.insert_with_default_key(AppError::NotFound);
@@ -27,12 +26,16 @@ pub fn App() -> impl IntoView {
             }
             .into_view()
         }>
+        <div class="h-lvh relative w-full px-1 py-1 bg-gray-900">
             <Header/>
             <main>
                 <Routes>
                     <Route path="" view=HomePage/>
+                    <Route path="/play" view=PlayPage/>
                 </Routes>
             </main>
+        </div>
+
         </Router>
     }
 }

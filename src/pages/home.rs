@@ -4,6 +4,6 @@ use crate::components::layout::*;
 #[component]
 pub fn HomePage() -> impl IntoView {
     view! {
-        <Layout/>
+        <Hello/>
     }
 }
